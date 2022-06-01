@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CountryCard from "./CountryCard";
-import { Link } from "react-router-dom";
 
 const Homepage = () => {
   const [countryData, setCountryData] = useState();
