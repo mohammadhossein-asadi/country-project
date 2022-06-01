@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
 const CountryCard = ({ countriesCard }) => {
   return (
     <>
       <div className="container">
         {countriesCard?.map((data, index) => (
-          <Link key={index} to="/">
+          <Link
+            key={index}
+            to={`/country/${data.name.common}`}
+            state={countriesCard}
+          >
             <div className="card">
               <img src={data.flags.png} alt={data.name.common} />
               <h3>{data.name.common}</h3>

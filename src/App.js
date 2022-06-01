@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import CountryDetails from "./components/CountryDetails";
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 import Notfound from "./components/Notfound";
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/country/:r" element={<CountryDetails />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </>
