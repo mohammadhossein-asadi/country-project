@@ -1,16 +1,16 @@
-import { Route, Routes } from "react-router-dom";
-import CountryDetails from "./components/CountryDetails";
-import Header from "./components/Header";
-import Homepage from "./components/Homepage";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import CountrieDetail from "./components/CountrieDetail";
 import Notfound from "./components/Notfound";
-
+import Header from "../src/components/Header";
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/countryDetail/:r" element={<CountryDetails />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/CountrieDetail/:name" element={<CountrieDetail />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </>
