@@ -1,10 +1,22 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 const CountryCard = ({ countryData }) => {
+  const [search, setSearch] = useState("");
+
+  const searchText = (e) => {
+    setSearch(e.target.value);
+  };
+
   return (
     <>
       <div className="nav">
         <div className="searchbox">
-          <input type="text" autoComplete="none" placeholder="Search" />
+          <input
+            type="text"
+            value={search}
+            autoComplete="off"
+            placeholder="Search"
+          />
         </div>
         <div className="selectbox">
           <select name="selectbox" id="selectbox"></select>
