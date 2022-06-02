@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/country/:r" element={<CountryDetails />} />
+        <Route path="/countryDetail/:r" element={<CountryDetails />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </>

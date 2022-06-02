@@ -6,8 +6,8 @@ const CountryCard = ({ countriesCard }) => {
         {countriesCard?.map((data, index) => (
           <Link
             key={index}
-            to={`/country/${data.name.common}`}
-            state={countriesCard}
+            to={`/countryDetail/${data.name.common}`}
+            state={data}
           >
             <div className="card">
               <img src={data.flags.png} alt={data.name.common} />
