@@ -12,8 +12,6 @@ const CountryDetails = () => {
 
   const curr = Object.keys(state.currencies)[0];
 
-  console.log(curr);
-
   const key = Object.keys(state.name.nativeName)[0];
 
   return (
