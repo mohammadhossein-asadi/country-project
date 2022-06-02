@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CountriesCard = ({ countriesData }) => {
   const [search, setSearch] = useState("");
-  const [filterParam, setFilterParam] = useState("");
+  const [filter, setFilter] = useState("");
 
   return (
     <>
@@ -17,12 +17,7 @@ const CountriesCard = ({ countriesData }) => {
           />
         </div>
         <div className="select-box">
-          <select
-            onChange={(e) => {
-              const selected = e.target.value;
-              setFilterParam(selected);
-            }}
-          >
+          <select onChange={(e) => setFilter(e.target.value)}>
             <option value="All">Filter By Region</option>
             <option value="Africa">Africa</option>
             <option value="Americas">America</option>

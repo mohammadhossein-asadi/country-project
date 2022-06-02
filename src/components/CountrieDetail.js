@@ -13,7 +13,7 @@ const CountrieDetail = () => {
 
   return (
     <>
-      <button onClick={() => goToHome()}></button>
+      <button onClick={() => goToHome()}>Back</button>
       <img src={state.state.flags.png} />
       <h1>{state.state.name.common}</h1>
       <h3>
