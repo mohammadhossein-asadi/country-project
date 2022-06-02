@@ -2,6 +2,15 @@ import { Link } from "react-router-dom";
 const CountryCard = ({ countryData }) => {
   return (
     <>
+      <div className="nav">
+        <div className="searchbox">
+          <input type="text" autoComplete="none" placeholder="Search" />
+        </div>
+        <div className="selectbox">
+          <select name="selectbox" id="selectbox"></select>
+        </div>
+      </div>
+
       <div className="container">
         {countryData?.map((data, index) => (
           <Link
