@@ -45,6 +45,9 @@ const CountryDetails = () => {
           Currencies:
           <span>{state.currencies[curr].name}</span>
         </h5>
+        <button>
+          <a href={state.maps.googleMaps}>View on map</a>
+        </button>
       </article>
     </>
   );
