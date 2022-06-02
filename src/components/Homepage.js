@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import CountryCard from "./CountryCard";
+import SearchCountry from "./SearchCountry";
 
 const Homepage = () => {
   const [countryData, setCountryData] = useState();
@@ -15,7 +16,8 @@ const Homepage = () => {
 
   return (
     <>
-      <CountryCard countriesCard={countryData} />
+      <SearchCountry countryData={countryData} />
+      <CountryCard countryData={countryData} />
     </>
   );
 };

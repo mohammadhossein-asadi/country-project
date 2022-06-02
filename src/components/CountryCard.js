@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-const CountryCard = ({ countriesCard }) => {
+const CountryCard = ({ countryData }) => {
   return (
     <>
       <div className="container">
-        {countriesCard?.map((data, index) => (
+        {countryData?.map((data, index) => (
           <Link
             key={index}
             to={`/countryDetail/${data.name.common}`}

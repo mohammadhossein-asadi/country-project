@@ -21,29 +21,22 @@ const CountryDetails = () => {
         <h2>{state.name.common}</h2>
         <img src={state.flags.png} alt={state.name.common} />
         <h5>
-          Native Name:
-          <span>{state.name.nativeName[key].common}</span>
-        </h5>
-
-        <h5>
-          Population:
-          <span>{state.population}</span>
+          Native Name: <span>{state.name.nativeName[key].common}</span>
         </h5>
         <h5>
-          Region:
-          <span>{state.region}</span>
+          Population: <span>{state.population}</span>
         </h5>
         <h5>
-          Capital:
-          <span>{state.capital}</span>
+          Region: <span>{state.region}</span>
         </h5>
         <h5>
-          Languages:
-          <span>{state.languages[lang]}</span>
+          Capital: <span>{state.capital}</span>
         </h5>
         <h5>
-          Currencies:
-          <span>{state.currencies[curr].name}</span>
+          Languages: <span>{state.languages[lang]}</span>
+        </h5>
+        <h5>
+          Currencies: <span>{state.currencies[curr].name}</span>
         </h5>
         <button>
           <a href={state.maps.googleMaps}>View on map</a>
