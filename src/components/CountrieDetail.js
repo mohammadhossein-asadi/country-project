@@ -1,13 +1,19 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const CountrieDetail = () => {
   const state = useLocation();
   const lang = Object.keys(state.state.languages)[0];
   const key = Object.keys(state.state.name.nativeName)[0];
 
+  const navigate = useNavigate();
+  const goToHome = () => {
+    navigate("/");
+  };
+
   return (
     <>
+      <button onClick={() => goToHome()}></button>
       <img src={state.state.flags.png} />
       <h1>{state.state.name.common}</h1>
       <h3>
