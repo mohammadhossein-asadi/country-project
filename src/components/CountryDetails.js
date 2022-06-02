@@ -10,8 +10,6 @@ const CountryDetails = () => {
   };
   const lang = Object.keys(state.languages)[0];
 
-  const curr = Object.keys(state.currencies)[0];
-
   const key = Object.keys(state.name.nativeName)[0];
 
   return (
@@ -35,9 +33,7 @@ const CountryDetails = () => {
         <h5>
           Languages: <span>{state.languages[lang]}</span>
         </h5>
-        <h5>
-          Currencies: <span>{state.currencies[curr].name}</span>
-        </h5>
+
         <button>
           <a href={state.maps.googleMaps}>View on map</a>
         </button>
