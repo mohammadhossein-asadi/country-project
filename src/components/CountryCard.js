@@ -14,6 +14,7 @@ const CountryCard = ({ countryData }) => {
           <input
             type="text"
             value={search}
+            onChange={searchText.bind(this)}
             autoComplete="off"
             placeholder="Search"
           />
